@@ -498,7 +498,7 @@ class cadastreImport(QObject):
                         if table == 'fanr':
                             continue
                         # Get depdir : first line with content
-                        with open(fpath) as fin:
+                        with open(fpath, encoding='ascii', errors='replace') as fin:
                             for a in fin:
                                 if len( a ) < 4 :
                                   continue
